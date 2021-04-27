@@ -1,0 +1,25 @@
+{
+  "name": "ocrp-utilities",
+  "version": "1.0.0",
+  "description": "OCRP bot thingy.",
+  "main": "dist/Bot.ts",
+  "scripts": {
+    "test": "No."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lawsonDevvv/ocrp-utilities.git"
+  },
+  "author": "lawsonDevvv",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lawsonDevvv/ocrp-utilities/issues"
+  },
+  "homepage": "https://github.com/lawsonDevvv/ocrp-utilities#readme",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "discord-akairo": "github:discord-akairo/discord-akairo",
+    "discord.js": "github:discordjs/discord.js#pull/4874/head",
+    "request": "^2.88.2"
+  }
+}
