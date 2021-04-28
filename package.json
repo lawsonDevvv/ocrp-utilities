@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/lawsonDevvv/ocrp-utilities#readme",
   "dependencies": {
+    "@types/node": "^15.0.1",
     "chalk": "^4.1.1",
     "discord-akairo": "github:discord-akairo/discord-akairo",
     "discord.js": "github:discordjs/discord.js#pull/4874/head",
