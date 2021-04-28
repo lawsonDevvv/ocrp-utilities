@@ -1,6 +1,6 @@
-import { AkairoClient, CommandHandler, ListenerHandler } from "discord-akairo";
+import { AkairoClient, Command, CommandHandler, ListenerHandler } from "discord-akairo";
 import { join } from 'path';
-import { PREFIX, OWNERS } from "../bot/Config";
+import { PREFIX, OWNERS } from "../bot/Config/Config";
 
 interface BotOptions {
     token?: string;
