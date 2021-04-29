@@ -6,5 +6,3 @@ export let OWNERS = [
     "618905325684260865", // Reddington#////
     "745434033164517403" // LawsonNotFound#////
 ]
-
-
