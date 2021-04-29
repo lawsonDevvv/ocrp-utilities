@@ -7,9 +7,10 @@ export default class extends Command {
             args: [
                 {
                     id: "target",
-                    match: "restContent",
+                    match: "none",
                     prompt: {
-                        start: "Who do you want to look up?"
+                        start: "Who do you want to look up?",
+                        retry: "Invalid! "
                     }
                 }
             ]
