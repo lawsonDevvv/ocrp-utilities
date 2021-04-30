@@ -45,12 +45,16 @@ export default class EvalCommand extends Command {
                     },
                     body: JSON.stringify(body)
                 }).then(res => res.json()).catch((e: Error) => {
-                    
+                    console.log(e);
+
                 });
 
                 await message.util?.send(`Yeah, so, apparently I can't send the full response, so check your DMs `);
                 console.log(binLink)
                 console.log(binLink.key)
+                if (binLink.message === 'Invalid request data') {
+                    return await message.author.send("So I can't fucking create the sourcebin link either. Take the L.")
+                } 
                 return await message.author.send(`https://sourceb.in/${binLink.key}`)
             }
         } catch (err) {
