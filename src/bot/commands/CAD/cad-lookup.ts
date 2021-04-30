@@ -1,4 +1,6 @@
 import { Command } from "discord-akairo";
+import { Message } from "discord.js";
+import request = require("request");
 
 export default class extends Command {
     public constructor() {
@@ -6,14 +8,27 @@ export default class extends Command {
             aliases: ["cad-lookup"],
             args: [
                 {
-                    id: "target",
-                    match: "none",
+                    id: "firstName",
                     prompt: {
-                        start: "Who do you want to look up?",
-                        retry: "Invalid! "
+                        start: "Please enter the target's first name.",
+                        retry: "Invalid! Try again."
+                    }
+                },
+                {
+                    id: "lastName",
+                    type: "string",
+                    prompt: {
+                        start: "Please enter the target's last name.",
+                        retry: "Invalid! Try again."
                     }
                 }
-            ]
+            ],
         })
+    }
+
+    public exec(message: Message, { firstName, lastName }: { firstName: string, lastName: string }) {
+        const yesResponses = ['y', 'ye', 'yes', 'yess', 'yees', 'yyes', 'yesyes']
+
+        request("")
     }
 }
