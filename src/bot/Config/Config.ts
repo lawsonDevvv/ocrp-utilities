@@ -6,3 +6,9 @@ export let OWNERS = [
     "618905325684260865", // Reddington#////
     "745434033164517403" // LawsonNotFound#////
 ]
+
+export const SONORAN = {
+    API_KEY: "X",
+    COMMUNITY_ID: "ONWARDCITYRP",
+    PLAN_TYPE: "STANDARD",
+}
