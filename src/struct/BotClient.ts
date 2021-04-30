@@ -10,7 +10,7 @@ interface BotOptions {
 export default class BotClient extends AkairoClient {
     config: BotOptions;
     commandHandler: CommandHandler = new CommandHandler(this, {
-        directory: join(__dirname, "..", "commands"),
+        directory: join(__dirname, "..", "bot", "commands"),
         commandUtil: true,
         allowMention: true,
         blockBots: true,
@@ -23,7 +23,7 @@ export default class BotClient extends AkairoClient {
 
 
     listenerHandler: ListenerHandler = new ListenerHandler(this, {
-        directory: join(__dirname, "..", "listeners"),
+        directory: join(__dirname, "..", "bot", "listeners"),
     });
 
 
