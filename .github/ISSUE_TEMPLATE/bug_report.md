@@ -23,7 +23,7 @@ If applicable, add screenshots to help explain your problem.
 **Desktop (please complete the following information):**
  - Operating System: [eg. Windows 10, OSX, etc]
  - Browser: [only fill out if you're using the browser version of discord]
- - Version Find this by going into User Settings, 
+ - Version: Find this by going into User Settings, 
 
 
 
