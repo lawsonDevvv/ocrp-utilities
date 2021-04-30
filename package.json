@@ -22,5 +22,9 @@
     "discord-akairo": "github:discord-akairo/discord-akairo",
     "discord.js": "github:discordjs/discord.js#pull/4874/head",
     "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.5.10",
+    "@types/request": "^2.48.5"
   }
 }
