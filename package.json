@@ -2,7 +2,7 @@
   "name": "ocrp-utilities",
   "version": "1.0.0",
   "description": "OCRP bot thingy.",
-  "main": "dist/Bot.ts",
+  "main": "dist/bot/Bot.js",
   "scripts": {
     "test": "No."
   },
