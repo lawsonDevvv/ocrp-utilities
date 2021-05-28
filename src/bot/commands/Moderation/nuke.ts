@@ -56,8 +56,17 @@ export default class extends Command {
                             deletedLogChat.send(`${message.author} nuked \`#${channel.name}\` with reason: ${reason}`);
 
                             channel.clone({position: channel.position}).then((c) => {
-                                c.send(null, {files: ["https://i.pinimg.com/originals/6c/48/5e/6c485efad8b910e5289fc7968ea1d22f.gif"]});
+                                c.send(
+                                    null, 
+                                    {
+                                        files: [
+                                            "https://i.pinimg.com/originals/6c/48/5e/6c485efad8b910e5289fc7968ea1d22f.gif"
+                                        ]
+                                    }
+                                );
+
                                 c.setPosition(channel.position);
+                                
                                 channel.delete(`${reason} || Actioned by ${message.author.tag}.`);
                             });
                         }, 5000);
