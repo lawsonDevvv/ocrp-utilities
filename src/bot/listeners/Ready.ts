@@ -17,8 +17,8 @@ export default class ReadyListener extends Listener {
         TriggerEvent("CLIENT", `Event "ready" triggered at ${new Date().toLocaleString()}`);
 
         const activities_list = [
-            "OCRP.", 
-            "Lawson sleep.",
+            "OCRP get default danced on by Red-Company.", 
+            "Shmurda sleep.",
             "J sleep.", 
             "general chat go to shit.",
             "/cad-ban @PossiblySebo Mad cuz bad."
