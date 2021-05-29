@@ -40,7 +40,8 @@ export default class extends Command {
     }
 
     public exec(message: Message, { channel, reason }: { channel: TextChannel, reason: string }) {
-        const yesResponses: string[] = ["y", "ye", "yes", "yeah", "yea", "ya"];
+        if (message.author.id === "813205215457181757") return message.channel.send("No.");
+        const yesResponses: string[] = ["y", "ye", "yes", "yeah", "yea", "ya", "just nuke it bitch"];
 
         message.util?.send(`Danger, Will Robinson, Danger! This action is **irreversable**! I hope you know what you're doing!\n\nJust to be clear that you know what you're doing: you want to nuke ${channel} for reason: \`${reason}\`?`).then(() => {
             const collector = message.channel.awaitMessages((m: Message) => m.author.id === message.author.id, {
@@ -65,8 +66,8 @@ export default class extends Command {
                                     }
                                 );
 
-                                c.setPosition(channel.position);
                                 
+
                                 channel.delete(`${reason} || Actioned by ${message.author.tag}.`);
                             });
                         }, 5000);
