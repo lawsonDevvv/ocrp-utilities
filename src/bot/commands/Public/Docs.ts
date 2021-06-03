@@ -30,12 +30,17 @@ export default class extends Command {
     }
 
     public exec(message: Message, { query, src }: { query: string, src: string }) {
-        request(`https://djsdocs.sorta.moe/v2/embed?src=${src}&q=${query}`, { json: true }, (err, res, body) => {
-            if (!body) {
-                return message.util.reply("When you ask me so much, I can't not help you~\n\nWhat do you want to search?")
-            }
+        try {
+            request(`https://djsdocs.sorta.moe/v2/embed?src=${src}&q=${query}`, { json: true }, (err, res, body) => {
+                if (!body) {
+                    message.util?.send("Get good.")
+                }
 
-            return message.channel.send(new MessageEmbed(body));
-        });
+                return message.channel.send(new MessageEmbed(body));
+            });
+        } catch (e) {
+            message.util?.send("Err. Code 155.3, go check your console hoe.");
+            console.log(e);
+        }
     }
 }

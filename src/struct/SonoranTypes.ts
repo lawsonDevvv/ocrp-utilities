@@ -10,7 +10,19 @@ export interface DispatchCall {
     code: string,
     description: string,
     notes: string,
-    units: Unit[]
+    units: Array<Unit>
+}
+
+export interface UnitData {
+    apiId1: string, // API ID - Typically Steam Hex
+    apiId2: string, // API ID - Typically Steam Hex
+    unitNum: string,
+    name: string,
+    district: string,
+    department: string,
+    subdivision: string,
+    rank: string,
+    group: string
 }
 
 export interface Unit {
@@ -20,17 +32,7 @@ export interface Unit {
     isPanic: boolean, // PANIC State
     location: string,
     aop: string,
-    data: {
-        apiId1: string, // API ID - Typically Steam Hex
-        apiId2: string, // API ID - Typically Steam Hex
-        unitNum: string,
-        name: string,
-        district: string,
-        department: string,
-        subdivision: string,
-        rank: string,
-        group: string, // Name of unit group
-    }
+    data: UnitData
 }
 
 export interface EmergencyCall {
