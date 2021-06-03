@@ -40,7 +40,6 @@ export default class extends Command {
     }
 
     public exec(message: Message, { channel, reason }: { channel: TextChannel, reason: string }) {
-        if (message.author.id === "813205215457181757") return message.channel.send("No.");
         const yesResponses: string[] = ["y", "ye", "yes", "yeah", "yea", "ya", "just nuke it bitch"];
 
         message.util?.send(`Danger, Will Robinson, Danger! This action is **irreversable**! I hope you know what you're doing!\n\nJust to be clear that you know what you're doing: you want to nuke ${channel} for reason: \`${reason}\`?`).then(() => {
@@ -56,7 +55,9 @@ export default class extends Command {
                         this.client.setTimeout(() => {
                             deletedLogChat.send(`${message.author} nuked \`#${channel.name}\` with reason: ${reason}`);
 
-                            channel.clone({position: channel.position}).then((c) => {
+                            channel.clone().then((c) => {
+                                c.setPosition(channel.position)
+
                                 c.send(
                                     null, 
                                     {
@@ -65,9 +66,7 @@ export default class extends Command {
                                         ]
                                     }
                                 );
-
                                 
-
                                 channel.delete(`${reason} || Actioned by ${message.author.tag}.`);
                             });
                         }, 5000);
