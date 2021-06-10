@@ -1,7 +1,6 @@
 import { Command } from "discord-akairo";
 import { MessageEmbed } from "discord.js";
 import { Message } from "discord.js";
-import { SetCopyrightFooter } from "../../Auto/SetCopyrightFooter"
 
 export default class extends Command {
     public constructor() {

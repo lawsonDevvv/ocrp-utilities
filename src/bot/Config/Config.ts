@@ -1,5 +1,5 @@
 // CONFIG FILE :: DO NOT EDIT
-export let PREFIX = "/";
+export let PREFIX = "/"
 export let TOKEN = "X";
 export let OWNERS = [
     "415278805683404821", // PossiblySebo#0001
@@ -10,5 +10,5 @@ export let OWNERS = [
 export const SONORAN = {
     API_KEY: "X",
     COMMUNITY_ID: "ONWARDCITYRP",
-    PLAN_TYPE: "STANDARD",
+    PLAN_TYPE: "PLUS",
 }

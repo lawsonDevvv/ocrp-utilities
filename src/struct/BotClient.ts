@@ -36,5 +36,11 @@ export default class BotClient extends AkairoClient {
 
         this.commandHandler.loadAll();
         this.listenerHandler.loadAll();
+        this.listenerHandler.setEmitters(
+            {
+                commandHandler: this.commandHandler,
+                listenerHandler: this.listenerHandler,
+            }
+        )
     }
 }
